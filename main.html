@@ -19,6 +19,39 @@
             <li>Si se necesita cambiar algo, solo tocas <strong>una clase</strong></li>
             <li>Tu código es más fácil de entender y mantener</li>
         </ul>
+
+        <h2>Ejemplo en Python</h2>
+        <h3>Mal - Sin SRP (una clase haciendo todo)</h3>
+        <pre><code class="language-python">class UserManager:
+    def create_user(self, username, password):
+        # Lógica para crear un usuario
+        pass
+
+    def delete_user(self, user_id):
+        # Lógica para eliminar un usuario
+        pass
+
+    def send_email(self, user_id, message):
+        # Lógica para enviar un correo electrónico
+        pass
+        </code></pre>
+        <h3>Bien - Con SRP (clases separadas para cada responsabilidad)</h3>
+        <pre><code class="language-python">class UserManager:
+    def create_user(self, username, password):
+        # Lógica para crear un usuario
+        pass
+
+    def delete_user(self, user_id):
+        # Lógica para eliminar un usuario
+        pass
+
+class EmailService:
+    def send_email(self, user_id, message):
+        # Lógica para enviar un correo electrónico
+        pass
+        </code></pre>
+        
+        
     </seccion>
 
 
