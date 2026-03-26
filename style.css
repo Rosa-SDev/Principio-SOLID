@@ -63,15 +63,19 @@ footer p:first-child {
 #titulo-pru{    
     font-size: 2.5em;
     color: black;
+    text-align: center;
 }
 
 #pru{
-    background-color: white;
-    border: 1px solid black;
+    background-color: rgb(220, 219, 217);
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 16px;
     font-family: 'Roboto Condensed', sans-serif;
     padding: 20px;
-    text-align: left;
-    margin: 0 auto;
+    text-align: justify;
+    margin-top: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+
