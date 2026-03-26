@@ -105,5 +105,28 @@ footer p:first-child {
     color: white;
 }
 
+.ejemplo-python {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    gap: 1rem;
+}
 
+.ejemplo {
+    padding: 1rem;
+    background-color: black;
+    border-radius: 1rem;
+    flex: 1;
+}
 
+h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.hljs {
+    border-radius: 1rem;
+    margin: 0.2rem;
+    margin-top: 0.5rem;
+}
