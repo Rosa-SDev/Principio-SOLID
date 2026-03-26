@@ -15,20 +15,20 @@
     </header>
 
     <section id = "srp"> <!-- SRP es Single Responsibility Principle -->
-        <section id="pru">
+        <div class="pru">
             <h2 id="titulo-pru">Principio de Responsabilidad Única (SRP)</h2>
             <p>El principio de responsabilidad única establece que una clase debe tener una única razón para cambiar, lo que significa que debe tener una sola responsabilidad o función. Esto ayuda a mantener el código más modular, fácil de entender y de facil mantenimiento.</p>
-        </section>
-        
-        
-        <h2>¿Qué significa? </h2>
-        <ul>
-            <li>Cada clase hace <strong>una sola cosa.</strong></li>
-            <li>Si se necesita cambiar algo, solo tocas <strong>una clase.</strong></li>
-            <li>Tu código es más fácil de entender y mantener.</li>
-        </ul>
+        </div>
 
-        <h2>Ejemplo en Python</h2>
+        <h2 class="titulos">¿Qué significa? </h2>
+        <ul id="lista-horizontal">
+            <li class="lista-item">Cada clase hace <strong>una sola cosa.</strong></li>
+            <li class="lista-item">Si se necesita cambiar algo, solo tocas <strong>una clase.</strong></li>
+            <li class="lista-item">Tu código es más fácil de entender y mantener.</li>
+        </ul>
+        
+
+        <h2 class="titulos">Ejemplo en Python</h2>
         <h3>Mal - Sin SRP (una clase haciendo todo)</h3>
         <pre><code class="language-python">
         class UserManager:
