@@ -5,6 +5,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -15,49 +18,56 @@
     </header>
 
     <section id = "srp"> <!-- SRP es Single Responsibility Principle -->
-        <h2>Principio de Responsabilidad Única (SRP)</h2> 
-        <p>El principio de responsabilidad única establece que una clase debe tener una única razón para cambiar, lo que significa que debe tener una sola responsabilidad o función. Esto ayuda a mantener el código más modular, fácil de entender y de facil mantenimiento.</p>
-        
-        <h2>¿Qué significa? </h2>
-        <ul>
-            <li>Cada clase hace <strong>una sola cosa.</strong></li>
-            <li>Si se necesita cambiar algo, solo tocas <strong>una clase.</strong></li>
-            <li>Tu código es más fácil de entender y mantener.</li>
+        <div class="pru">
+            <h2 id="titulo-pru">Principio de Responsabilidad Única (SRP)</h2>
+            <p>El principio de responsabilidad única establece que una clase debe tener una única razón para cambiar, lo que significa que debe tener una sola responsabilidad o función. Esto ayuda a mantener el código más modular, fácil de entender y de facil mantenimiento.</p>
+        </div>
+
+        <h2 class="titulos">¿Qué significa? </h2>
+        <ul id="lista-horizontal">
+            <li class="lista-item">Cada clase hace <strong>una sola cosa.</strong></li>
+            <li class="lista-item">Si se necesita cambiar algo, solo tocas <strong>una clase.</strong></li>
+            <li class="lista-item">Tu código es más fácil de entender y mantener.</li>
         </ul>
-
-        <h2>Ejemplo en Python</h2>
-        <h3>Mal - Sin SRP (una clase haciendo todo)</h3>
-        <pre><code class="language-python">
-        class UserManager:
-            def create_user(self, username, password):
-                # Lógica para crear un usuario
-                pass
-
-            def delete_user(self, user_id):
-                # Lógica para eliminar un usuario
-                pass
-
-            def send_email(self, user_id, message):
-                # Lógica para enviar un correo electrónico
-                pass
-        </code></pre>
-        <h3>Bien - Con SRP (clases separadas para cada responsabilidad)</h3>
-        <pre><code class="language-python">
-        class UserManager:
-            def create_user(self, username, password):
-                # Lógica para crear un usuario
-                pass
-
-            def delete_user(self, user_id):
-                # Lógica para eliminar un usuario
-                pass
-
-        class EmailService:
-            def send_email(self, user_id, message):
-                # Lógica para enviar un correo electrónico
-                pass
-        </code></pre>
         
+        <h2 class="titulos">Ejemplo en Python</h2>
+        <div class="ejemplo-python">
+            <div class="ejemplo">
+                <h3>Mal - Sin SRP (una clase haciendo todo)</h3>
+                <pre><code class="language-python">
+                class UserManager:
+                    def create_user(self, username, password):
+                        # Lógica para crear un usuario
+                        pass
+
+                    def delete_user(self, user_id):
+                        # Lógica para eliminar un usuario
+                        pass
+
+                    def send_email(self, user_id, message):
+                        # Lógica para enviar un correo electrónico
+                        pass
+                </code></pre>
+            </div>
+            <div class="ejemplo">
+                <h3>Bien - Con SRP (clases separadas para cada responsabilidad)</h3>
+                <pre><code class="language-python">
+                class UserManager:
+                    def create_user(self, username, password):
+                        # Lógica para crear un usuario
+                        pass
+
+                    def delete_user(self, user_id):
+                        # Lógica para eliminar un usuario
+                        pass
+
+                class EmailService:
+                    def send_email(self, user_id, message):
+                        # Lógica para enviar un correo electrónico
+                        pass
+                </code></pre>
+            </div>
+        </div>
         
     </section>
 
