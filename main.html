@@ -9,55 +9,90 @@
 
 <body>
 
-    <seccion id = "srp"> <!-- SRP es Single Responsibility Principle -->
-        <h1>Principio de Responsabilidad Única (SRP)</h1>
+    <header>
+        <h1>Principios SOLID</h1>
+        <p>Daniel Guzmán | Rosa Peña | Sebastián Gallego | Matthew Corzo</p>
+    </header>
+
+    <section id = "srp"> <!-- SRP es Single Responsibility Principle -->
+        <h2>Principio de Responsabilidad Única (SRP)</h2>
+        <h1>Principio #1 (S) de SOLID</h1> 
         <p>El principio de responsabilidad única establece que una clase debe tener una única razón para cambiar, lo que significa que debe tener una sola responsabilidad o función. Esto ayuda a mantener el código más modular, fácil de entender y de facil mantenimiento.</p>
         
-        <h2>Que significa? </h2>
+        <h2>¿Qué significa? </h2>
         <ul>
-            <li>Cada clase hace <strong>una sola cosa</strong></li>
-            <li>Si se necesita cambiar algo, solo tocas <strong>una clase</strong></li>
-            <li>Tu código es más fácil de entender y mantener</li>
+            <li>Cada clase hace <strong>una sola cosa.</strong></li>
+            <li>Si se necesita cambiar algo, solo tocas <strong>una clase.</strong></li>
+            <li>Tu código es más fácil de entender y mantener.</li>
         </ul>
 
         <h2>Ejemplo en Python</h2>
         <h3>Mal - Sin SRP (una clase haciendo todo)</h3>
-        <pre><code class="language-python">class UserManager:
-    def create_user(self, username, password):
-        # Lógica para crear un usuario
-        pass
+        <pre><code class="language-python">
+        class UserManager:
+            def create_user(self, username, password):
+                # Lógica para crear un usuario
+                pass
 
-    def delete_user(self, user_id):
-        # Lógica para eliminar un usuario
-        pass
+            def delete_user(self, user_id):
+                # Lógica para eliminar un usuario
+                pass
 
-    def send_email(self, user_id, message):
-        # Lógica para enviar un correo electrónico
-        pass
+            def send_email(self, user_id, message):
+                # Lógica para enviar un correo electrónico
+                pass
         </code></pre>
         <h3>Bien - Con SRP (clases separadas para cada responsabilidad)</h3>
-        <pre><code class="language-python">class UserManager:
-    def create_user(self, username, password):
-        # Lógica para crear un usuario
-        pass
+        <pre><code class="language-python">
+        class UserManager:
+            def create_user(self, username, password):
+                # Lógica para crear un usuario
+                pass
 
-    def delete_user(self, user_id):
-        # Lógica para eliminar un usuario
-        pass
+            def delete_user(self, user_id):
+                # Lógica para eliminar un usuario
+                pass
 
-class EmailService:
-    def send_email(self, user_id, message):
-        # Lógica para enviar un correo electrónico
-        pass
+        class EmailService:
+            def send_email(self, user_id, message):
+                # Lógica para enviar un correo electrónico
+                pass
         </code></pre>
         
         
-    </seccion>
+    </section>
 
+    <section id="como-aplicarlo">
+        <h2>Cómo aplicarlo</h2>
+        <h3>Preguntas para detectar violaciones</h3>
 
+        <p><strong>01 - ¿Tu clase hace más de una cosa?</strong></p>
+        <p>Si puedes describir la clase usando la palabra "y" (guarda datos y envía emails), probablemente viola el SRP. Divide la clase.</p>
+
+        <p><strong>02 - ¿Cuántas razones tiene para cambiar?</strong></p>
+        <p>Identifica quién puede pedir un cambio: ¿el equipo de base de datos? ¿el equipo de emails? Si la respuesta incluye múltiples actores, separa la clase.</p>
+
+        <p><strong>03 - ¿El nombre describe exactamente lo que hace?</strong></p>
+        <p>Si el nombre de tu clase o función es vago (<code>Manager</code>, <code>Handler</code>, <code>Processor</code>), suele ser señal de múltiples responsabilidades mezcladas.</p>
+
+        <p><strong>04 - ¿Es difícil escribir pruebas unitarias?</strong></p>
+        <p>Si una clase es difícil de testear en aislamiento, generalmente es porque tiene demasiadas dependencias y responsabilidades. El SRP facilita el testing.</p>
+    </section>
+
+    <section id="buenas-practicas">
+        <h2>Buenas prácticas</h2>
+        <ul>
+        <li>Dale a cada clase un nombre claro que describa <strong>una sola responsabilidad.</strong></li>
+        <li>Si una clase tiene más de 2 o 3 métodos muy distintos entre sí, considera separarla.</li>
+        <li>Agrupa el código por <strong>quién lo usa</strong>, no por conveniencia.</li>
+        <li>Prefiere muchas clases pequeñas y específicas sobre pocas clases grandes.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Daniel Guzmán | Rosa Peña | Sebastián Gallego | Matthew Corzo</p>
+        <p>Ingeniería de Software - Universidad de Ibagué</p>
+        <p>Contacto para desarrollo de páginas web: SuperDevelopers@gmail.com</p>
+    </footer>
 
 </body>
-
-<footer>
-    
-</footer>
