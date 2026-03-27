@@ -37,36 +37,36 @@
             <div class="ejemplo">
                 <h3>Mal - Sin SRP (una clase haciendo todo)</h3>
                 <pre><code class="language-python">
-                class UserManager:
-                    def create_user(self, username, password):
-                        # Lógica para crear un usuario
-                        pass
+class UserManager:
+    def create_user(self, username, password):
+        # Lógica para crear un usuario
+        pass
 
-                    def delete_user(self, user_id):
-                        # Lógica para eliminar un usuario
-                        pass
+    def delete_user(self, user_id):
+        # Lógica para eliminar un usuario
+        pass
 
-                    def send_email(self, user_id, message):
-                        # Lógica para enviar un correo electrónico
-                        pass
+    def send_email(self, user_id, message):
+        # Lógica para enviar un correo electrónico
+        pass
                 </code></pre>
             </div>
             <div class="ejemplo">
                 <h3>Bien - Con SRP (clases separadas para cada responsabilidad)</h3>
                 <pre><code class="language-python">
-                class UserManager:
-                    def create_user(self, username, password):
-                        # Lógica para crear un usuario
-                        pass
+class UserManager:
+    def create_user(self, username, password):
+        # Lógica para crear un usuario
+        pass
 
-                    def delete_user(self, user_id):
-                        # Lógica para eliminar un usuario
-                        pass
+    def delete_user(self, user_id):
+        # Lógica para eliminar un usuario
+        pass
 
-                class EmailService:
-                    def send_email(self, user_id, message):
-                        # Lógica para enviar un correo electrónico
-                        pass
+class EmailService:
+    def send_email(self, user_id, message):
+        # Lógica para enviar un correo electrónico
+        pass
                 </code></pre>
             </div>
         </div>
@@ -75,7 +75,6 @@
     <section id="como-aplicarlo">
         <h2>Cómo aplicarlo</h2>
         <h3>Preguntas para detectar violaciones</h3>
-
         <p><strong>01 - ¿Tu clase hace más de una cosa?</strong></p>
         <p>Si puedes describir la clase usando la palabra "y" (guarda datos y envía emails), probablemente viola el SRP. Divide la clase.</p>
 
@@ -111,13 +110,15 @@
         </ul>
     </section>
 
-    <blockquote id="cita">
-        <i class="bi bi-quote"></i>
-        <div class="contenido-cita">
-            <p>"Una clase debe tener una sola razón para cambiar."</p>
-            <cite>-Robert C. Martin, 2017</cite>
-        </div>
-    </blockquote>
+    <div class="bloque-cita">
+        <blockquote id="cita">
+            <i class="bi bi-quote"></i>
+            <div class="contenido-cita">
+                <p id="texto-cita">"Una clase debe tener una sola razón para cambiar."</p>
+                <cite id="cita-autor">Robert C. Martin, 2017</cite>
+            </div>
+        </blockquote>
+    </div>
 
     <footer>
         <p>Daniel Guzmán | Rosa Peña | Sebastián Gallego | Matthew Corzo</p>
