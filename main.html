@@ -27,9 +27,9 @@
 
         <h2 class="titulos">¿Qué significa? </h2>
         <ul id="lista-horizontal">
-            <li class="lista-item">Cada clase hace <strong>una sola cosa.</strong></li>
-            <li class="lista-item">Si se necesita cambiar algo, solo tocas <strong>una clase.</strong></li>
-            <li class="lista-item">Tu código es más fácil de entender y mantener.</li>
+            <li class="lista-item"><span>Cada clase hace <strong>una sola cosa.</strong></span></li>
+            <li class="lista-item"><span>Si se necesita cambiar algo, solo tocas <strong>una clase.</strong></span></li>
+            <li class="lista-item"><span>Tu código es más fácil de entender y mantener.</span></li>
         </ul>
         
         <h2 class="titulos">Ejemplo en Python</h2>
@@ -75,19 +75,40 @@ class EmailService:
     <section id="como-aplicarlo">
         <h2>Cómo aplicarlo</h2>
         <h3>Preguntas para detectar violaciones</h3>
-        <p><strong>01 - ¿Tu clase hace más de una cosa?</strong></p>
-        <p>Si puedes describir la clase usando la palabra "y" (guarda datos y envía emails), probablemente viola el SRP. Divide la clase.</p>
 
-        <p><strong>02 - ¿Cuántas razones tiene para cambiar?</strong></p>
-        <p>Identifica quién puede pedir un cambio: ¿el equipo de base de datos? ¿el equipo de emails? Si la respuesta incluye múltiples actores, separa la clase.</p>
+        <div class="pregunta">
+            <span class="pregunta-num">01</span>
+            <div class="pregunta-texto">
+                <strong>¿Tu clase hace más de una cosa?</strong>
+                <p>Si puedes describir la clase usando la palabra "y" (guarda datos y envía emails), probablemente viola el SRP. Divide la clase.</p>
+            </div>
+        </div>
 
-        <p><strong>03 - ¿El nombre describe exactamente lo que hace?</strong></p>
-        <p>Si el nombre de tu clase o función es vago (<code>Manager</code>, <code>Handler</code>, <code>Processor</code>), suele ser señal de múltiples responsabilidades mezcladas.</p>
+        <div class="pregunta">
+            <span class="pregunta-num">02</span>
+            <div class="pregunta-texto">
+                <strong>¿Cuántas razones tiene para cambiar?</strong>
+                <p>Identifica quién puede pedir un cambio: ¿el equipo de base de datos? ¿el equipo de emails? Si la respuesta incluye múltiples actores, separa la clase.</p>
+            </div>
+        </div>
 
-        <p><strong>04 - ¿Es difícil escribir pruebas unitarias?</strong></p>
-        <p>Si una clase es difícil de testear en aislamiento, generalmente es porque tiene demasiadas dependencias y responsabilidades. El SRP facilita el testing.</p>
+        <div class="pregunta">
+            <span class="pregunta-num">03</span>
+            <div class="pregunta-texto">
+                <strong>¿El nombre describe exactamente lo que hace?</strong>
+                <p>Si el nombre de tu clase o función es vago (<code>Manager</code>, <code>Handler</code>, <code>Processor</code>), suele ser señal de múltiples responsabilidades mezcladas.</p>
+            </div>
+        </div>
+
+        <div class="pregunta">
+            <span class="pregunta-num">04</span>
+            <div class="pregunta-texto">
+                <strong>¿Es difícil escribir pruebas unitarias?</strong>
+                <p>Si una clase es difícil de testear en aislamiento, generalmente es porque tiene demasiadas dependencias y responsabilidades. El SRP facilita el testing.</p>
+            </div>
+        </div>
     </section>
-
+    
     <section id="buenas-practicas">
         <h2>Buenas prácticas</h2>
         <ul>
