@@ -138,3 +138,15 @@ h3 {
     margin-top: 0.5rem;
     font-size: 1.3rem;
 }
+
+#cita{
+    background-color: rgba(228, 228, 228, 0.662);
+    margin: 1rem;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contenido-cita {
+    margin: 1rem;
+}
