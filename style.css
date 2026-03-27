@@ -81,6 +81,10 @@ footer p:first-child {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#contenido-inicio {
+    font-size: 1.5rem;
+}
+
 .titulos {
     margin-left: 1.5rem;
     font-size: 2rem;
@@ -96,7 +100,7 @@ footer p:first-child {
 
 .lista-item {
     flex: 1;
-    background-color: rgb(0, 1, 28);
+    background-color: black;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 8px;
     padding: 1rem;
@@ -111,6 +115,7 @@ footer p:first-child {
     margin-left: 1rem;
     margin-right: 1rem;
     gap: 1rem;
+    overflow-x: auto;
 }
 
 .ejemplo {
