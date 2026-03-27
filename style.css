@@ -148,35 +148,36 @@ footer p:first-child {
     background-color: rgba(228, 228, 228, 0.662);
     margin: 1rem;
     border-radius: 5rem;
+    text-align: center;
+    justify-content: center;
+    padding: 0.1rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+
+.contenido-cita {
+    font-size: 1.3rem
+
+}
+
+.bloque-cita {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 1rem 2rem;
-    text-align: center;
 }
 
-#cita .bi-quote {
-    font-size: 2rem;
-    color: #E81E32;
-    margin-bottom: 0.5rem;
+.bi {
+    font-size: 2.5rem;
+    color: rgb(255, 0, 0);
 }
 
-.contenido-cita p {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #000000;
-    font-style: italic;
+#texto-cita {
+    font-weight: bold;
 }
 
-.contenido-cita cite {
-    font-size: 0.9rem;
-    color: #555555;
-    font-style: normal;
-    margin-top: 0.5rem;
-    display: block;
+#cita-autor {
+    color: gray;
 }
-
 
 #como-aplicarlo {
     padding: 2rem 1.5rem;
