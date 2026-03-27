@@ -107,6 +107,11 @@ footer p:first-child {
     text-align: center;
     color: white;
     font-size: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
 }
 
 .ejemplo-python {
@@ -126,7 +131,7 @@ footer p:first-child {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h3 {
+.ejemplo h3 {
     color: white;
     margin-bottom: 0.5rem;
     font-size: 1.4rem;
@@ -139,14 +144,142 @@ h3 {
     font-size: 1.3rem;
 }
 
-#cita{
+#cita {
     background-color: rgba(228, 228, 228, 0.662);
     margin: 1rem;
     border-radius: 5rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    padding: 1rem 2rem;
+    text-align: center;
 }
 
-.contenido-cita {
-    margin: 1rem;
+#cita .bi-quote {
+    font-size: 2rem;
+    color: #E81E32;
+    margin-bottom: 0.5rem;
+}
+
+.contenido-cita p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000000;
+    font-style: italic;
+}
+
+.contenido-cita cite {
+    font-size: 0.9rem;
+    color: #555555;
+    font-style: normal;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+
+#como-aplicarlo {
+    padding: 2rem 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#como-aplicarlo h2 {
+    font-size: 2.3rem;
+    margin-bottom: 0.3rem;
+}
+
+#como-aplicarlo h3 {
+    font-size: 1.2rem;
+    color: #555555;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.pregunta {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    padding: 1rem 1.2rem;
+    border-left: 3px solid #E81E32;
+    background-color: rgba(228, 228, 228, 0.3);
+    border-radius: 0 8px 8px 0;
+}
+
+.pregunta-num {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #E81E32;
+    line-height: 1;
+    min-width: 40px;
+}
+
+.pregunta-texto strong {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.pregunta-texto p {
+    font-size: 1rem;
+    color: #444444;
+}
+
+
+#buenas-practicas {
+    padding: 2rem 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#buenas-practicas h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1.2rem;
+}
+
+#buenas-practicas ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#buenas-practicas li {
+    padding: 0.8rem 1.2rem;
+    background-color: rgba(228, 228, 228, 0.3);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    border-left: 3px solid #000000;
+}
+
+
+#beneficios {
+    padding: 2rem 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#beneficios h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1.2rem;
+}
+
+#beneficios ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#beneficios li {
+    padding: 1rem 1.2rem;
+    background-color: rgba(228, 228, 228, 0.3);
+    border-radius: 8px;
+    font-size: 1rem;
+    border-top: 3px solid #E81E32;
+}
+
+#beneficios li strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
 }
