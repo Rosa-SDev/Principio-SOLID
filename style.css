@@ -9,7 +9,6 @@ body {
     background-color: #ffffff;
     color: #000000;
     line-height: 1.7;
-    font-size: 1.1rem;
 }
 
 header {
@@ -81,9 +80,13 @@ footer p:first-child {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#contenido-inicio {
+    font-size: 1.5rem;
+}
+
 .titulos {
     margin-left: 1.5rem;
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 
 #lista-horizontal {
@@ -96,13 +99,14 @@ footer p:first-child {
 
 .lista-item {
     flex: 1;
-    background-color: rgb(0, 1, 28);
+    background-color: black;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: white;
+    font-size: 1.5rem;
 }
 
 .ejemplo-python {
@@ -111,6 +115,7 @@ footer p:first-child {
     margin-left: 1rem;
     margin-right: 1rem;
     gap: 1rem;
+    overflow-x: auto;
 }
 
 .ejemplo {
@@ -118,15 +123,30 @@ footer p:first-child {
     background-color: black;
     border-radius: 1rem;
     flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
     color: white;
     margin-bottom: 0.5rem;
+    font-size: 1.4rem;
 }
 
 .hljs {
     border-radius: 1rem;
     margin: 0.2rem;
     margin-top: 0.5rem;
+    font-size: 1.3rem;
+}
+
+#cita{
+    background-color: rgba(228, 228, 228, 0.662);
+    margin: 1rem;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contenido-cita {
+    margin: 1rem;
 }
